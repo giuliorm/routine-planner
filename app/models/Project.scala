@@ -1,5 +1,5 @@
 package models
 
-class Project {
+class Project (val name: String, points: List[Point]) {
 
 }
