@@ -14,7 +14,7 @@ class HomeController @Inject()(cc: ControllerComponents)(implicit assetsFinder: 
 
   private val title = "My Routine Planner"
   private val hello = "Welcome to the my routine Planner"
-
+  private val menuItems = List("Projects", "Planning", "Calendar")
   /**
     * Create an Action to render an HTML page with a welcome message.
     * The configuration in the `routes` file means that this method
@@ -22,7 +22,8 @@ class HomeController @Inject()(cc: ControllerComponents)(implicit assetsFinder: 
     * a path of `/`.
     */
   def index = Action {
-    Ok(views.html.index(title, hello))
+
+    Ok(views.html.index(title, hello, menuItems))
   }
 
 }
